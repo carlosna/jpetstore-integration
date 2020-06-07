@@ -1,0 +1,15 @@
+package org.mybatis.jpetstore.exceptions;
+
+import javax.ws.rs.core.Response;
+import javax.ws.rs.ext.ExceptionMapper;
+
+public class QueryParamInvalidExceptionMapper implements ExceptionMapper<QueryParamInvalidException>{
+
+	@Override
+	public Response toResponse(QueryParamInvalidException ex) {
+		ErrorResponse response = new ErrorResponse(ex.getMessage(), "400");
+		
+		return Response.ok().entity(response).build();
+	}
+
+}

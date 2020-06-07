@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archive>
+    <archive targetInArchive="/jpetstore-ejb.jar">
+        <dir sourceOnDisk="/home/pelezinho/eclipse-workspace/jpetstore-ejb/build/classes" targetInArchive="/"/>
+    </archive>
+    <archive targetInArchive="/jpetstore-war.war">
+        <dir sourceOnDisk="/home/pelezinho/eclipse-workspace/jpetstore-war/WebContent" targetInArchive="/"/>
+    </archive>
+    <dir sourceOnDisk="/home/pelezinho/eclipse-workspace/jpetstore-ear" targetInArchive="/"/>
+</archive>

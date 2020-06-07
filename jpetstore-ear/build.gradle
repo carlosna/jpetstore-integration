@@ -1,0 +1,13 @@
+plugins {
+	id 'ear'
+	id 'java'
+}
+
+ear {
+     archiveName='jpetstore.ear'
+     libDirName 'lib'
+     into("META-INF"){
+        from("META-INF") 
+     }
+
+}

@@ -1,0 +1,18 @@
+package org.mybatis.jpetstore.exceptions;
+
+public class ErrorResponse {
+	
+	String errorMessage;
+	String errorCode;
+	
+	public ErrorResponse(String errorMessage, String errorCode) {
+		super();
+		this.errorMessage = errorMessage;
+		this.errorCode = errorCode;
+	}
+
+	public ErrorResponse() {
+		
+	}
+	
+}

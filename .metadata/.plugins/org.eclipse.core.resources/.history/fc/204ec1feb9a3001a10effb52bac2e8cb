@@ -1,0 +1,8 @@
+package org.mybatis.jpetstore.facades;
+
+import java.util.List;
+
+public interface ProductLocal {
+
+	public List<Product> getProducts();
+}

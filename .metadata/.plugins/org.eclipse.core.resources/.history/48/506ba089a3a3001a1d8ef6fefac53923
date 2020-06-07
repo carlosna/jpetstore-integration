@@ -1,0 +1,34 @@
+package org.mybatis.jpetstore.rest;
+
+
+import java.util.ArrayList;
+
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
+
+import org.mybatis.jpetstore.domain.Product;
+import org.mybatis.jpetstore.service.ProductService;
+
+import net.sourceforge.stripes.integration.spring.SpringBean;
+
+@Path("/products")
+@Produces("application/json")
+@Consumes("application/json")
+public class ProductEndpoint {
+	
+	@SpringBean
+	private transient ProductService service;
+	
+	@GET
+	public Response listAll() //@QueryParam("start") final Integer startPosition, 
+			                  //   @QueryParam("max") final Integer maxResult) 
+	{
+		ArrayList<Product> produtos = new ArrayList<Product>();
+		produtos = (ArrayList<Product>) service.getAllProducts();
+		return Response.status(Response.Status.OK).entity(produtos).build();
+	}
+	
+}

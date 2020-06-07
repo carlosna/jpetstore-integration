@@ -1,0 +1,16 @@
+package org.mybatis.jpetstore.service;
+
+import org.mybatis.jpetstore.mapper.ItemMapper;
+import org.mybatis.jpetstore.mapper.LineItemMapper;
+import org.mybatis.jpetstore.mapper.OrderMapper;
+import org.mybatis.jpetstore.mapper.ProductMapper;
+import org.mybatis.jpetstore.mapper.SequenceMapper;
+
+public class ProductService {
+
+	  private final ProductMapper productMapper;
+	  
+	  public OrderService(ProductMapper productMapper) {
+	    this.productMapper = productMapper;
+	  }
+}

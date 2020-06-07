@@ -1,0 +1,10 @@
+package org.mybatis.jpetstore.exceptions;
+
+public class QueryParamInvalidException extends RuntimeException {
+
+	private static final long serialVersionUID = 1L;
+
+	public QueryParamInvalidException(String message) {
+		super(message);		
+	}	
+}

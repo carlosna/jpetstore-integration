@@ -1,0 +1,5 @@
+package org.mybatis.jpetstore.facade;
+
+public class ProductSessionFacade {
+
+}

@@ -1,0 +1,26 @@
+package org.mybatis.jpetstore.rest;
+
+
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.Response;
+
+import org.mybatis.jpetstore.service.ProductService;
+import org.springframework.beans.factory.annotation.Autowired;
+
+@Path("/products")
+@Produces("application/json")
+public class ProductEndpoint {
+	
+	@Autowired
+	ProductService service;
+	
+	
+	public Response listAll() //@QueryParam("start") final Integer startPosition, 
+			                  //   @QueryParam("max") final Integer maxResult) 
+	{
+		
+		return Response.status(Response.Status.OK).entity(service.getAllProducts()).build();
+	}
+	
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="jpetstore-ear">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="jpetstore.war" deploy-path="/" handle="module:/resource/jpetstore/jpetstore">
+            <dependent-object>Module_1590951390929</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jpetstore-ejb.jar" deploy-path="/" handle="module:/resource/jpetstore-ejb/jpetstore-ejb">
+            <dependent-object>Module_1590974071229</dependent-object>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jpetstore-ejbClient.jar" deploy-path="/" handle="module:/resource/jpetstore-ejbClient/jpetstore-ejbClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

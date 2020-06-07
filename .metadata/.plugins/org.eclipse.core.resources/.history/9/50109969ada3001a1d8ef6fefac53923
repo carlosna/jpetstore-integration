@@ -1,0 +1,33 @@
+package org.mybatis.jpetstore.facades;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+/**
+ * Session Bean implementation class ProductBean
+ */
+@Stateless
+@LocalBean
+public class ProductBean implements ProductLocal {
+	
+	@PersistenceContext
+	private EntityManager em;
+	
+    /**
+     * Default constructor. 
+     */
+    public ProductBean() {
+        // TODO Auto-generated constructor stub
+    }
+
+	@Override
+	public List<Product> getProducts() {
+		return this.em.createQuery("select p from product p", Product.class).getResultList();
+	}
+
+}
