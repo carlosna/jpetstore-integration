@@ -1,0 +1,10 @@
+apply plugin: 'war'
+
+repositories {
+    jcenter()
+}
+
+sourceCompatibility = 1.8
+version = '1.0'
+war.baseName = 'jpetstore'
+project.webAppDirName = 'WebContent'

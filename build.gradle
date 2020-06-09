@@ -14,4 +14,4 @@ ear {
     appDirName 'src/main/app' 
 }
 
-
+baseName = 'jpetstore'

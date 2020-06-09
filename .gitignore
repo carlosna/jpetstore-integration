@@ -1,7 +1,11 @@
+.metadata
 build/
 .gradle/
 .project
 .settings/
-ejb/.classpath
+jpetstore-ejb/.classpath
 ejb/derby.log
-war/.classpath
+jpetstore-war/.classpath
+jpetstore-ear/
+jpetstore-war/build/
+jpetstore-ejb/build/
